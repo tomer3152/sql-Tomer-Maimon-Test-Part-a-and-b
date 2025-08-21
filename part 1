@@ -1,0 +1,10 @@
+1. 1 WHERE is used to filter rows before grouping the data, while HAVING filters after performing GROUP BY
+2. 1 LEFT JOIN returns all records from the left table and only the matching records from the right table, while RIGHT JOIN does the opposite.
+3. 2 It filters and returns only unique values, eliminating duplicates from each column.
+4. 2. Using LIMIT.
+5. 1. It creates a relationship between tables to maintain data integrity.
+6. 2 The records in the child table are deleted when the corresponding record in the parent table is deleted.
+7. 4. Counts only nonNULL values.
+8. 1. Sets a default value for a column if no value is provided.
+9. 4. FULL OUTER JOIN 
+10. 1.Prevents invalid values from being entered into a sensitive column.
