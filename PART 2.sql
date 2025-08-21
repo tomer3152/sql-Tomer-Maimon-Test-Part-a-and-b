@@ -22,12 +22,23 @@ VALUES ('CAT124', 'LG', 'OLED65', 65, '8K', 2500.0, 5, 2023, 'Yes', 'webOS', 'OL
 INSERT INTO televisions (catalog_number, brand, model, screen_size, resolution, price, stock_quantity, release_year, smart_tv, os, panel_type)
 VALUES ('CAT125', 'Sony', 'LED50', 50, 'Full HD', 800.0, 15, 2021, 'No', NULL, 'LED');
 ```
-1.Count Smart TVs in stock: 2
+1.Count Smart TVs in stock: 
+SELECT COUNT(*) AS smart_tv_count
+FROM televisions
+WHERE smart_tv = 'Yes'; 
+(2)
 
 2.Average price per brand: 
-LG	2500.0
+SELECT brand, AVG(price) AS avg_price
+FROM televisions
+GROUP BY brand;
+    LG	2500.0)
 Samsung	1200.0
-Sony	800.0
+(Sony	800.0
 
 3.All TVs cheaper than $1000:
-Sony	LED50	 800.0
+SELECT brand, model, price
+FROM televisions
+WHERE price < 1000
+ORDER BY price ASC;
+(Sony	LED50	 800.0)
